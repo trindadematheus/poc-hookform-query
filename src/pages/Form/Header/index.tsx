@@ -11,11 +11,11 @@ function Header({ isViewMode }: HeaderProps) {
     <>
       <div className="bg-base-200 py-4">
         <div className="text-xl font-bold container max-w-6xl flex justify-between items-center">
-          <h1>{repoName || 'New Repository'}</h1>
+          <h1>{repoName || "New Repository"}</h1>
 
           <div className="flex gap-4">
             <button className="btn btn-primary">EDITAR</button>
-            <button className="btn btn-primary">SALVAR</button>
+            <button className="btn btn-primary">{isViewMode}</button>
           </div>
         </div>
       </div>

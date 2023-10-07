@@ -15,9 +15,7 @@ function FormPage() {
   const { repoName } = useParams();
   const methods = useForm();
 
-  const [formState, setFormState] = useState<FormState>(
-    repoName ? "VIEW" : "CREATION"
-  );
+  const [formState] = useState<FormState>(repoName ? "VIEW" : "CREATION");
 
   const repositoryByNameQuery = useGetRepositoryByName({
     name: repoName || "",
